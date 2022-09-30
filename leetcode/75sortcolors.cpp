@@ -1,15 +1,15 @@
-class Solution {
-public:
-    int removeDuplicates(vector<int>& nums) {
-        int i=1;
-        for(int j=0 ;j<nums.size();j++)
+ void sortColors(vector<int>& nums) {
+        for(int i=0;i<nums.size()-1;i++)
         {
-            if(nums[i]!=nums[j])
+            for(int j=i+1;j<nums.size();j++)
             {
-                 nums[i]=nums[j];
-                i++;
+                if(nums[i]>nums[j])
+                {
+                    swap(nums[i],nums[j]);
+                }
             }
+                
+            
         }
-        return i;
+        
     }
-};
